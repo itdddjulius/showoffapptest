@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex flex-column">
+      <%= render 'layouts/navigations/header' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

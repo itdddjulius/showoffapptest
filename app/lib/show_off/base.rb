@@ -1,6 +1,6 @@
 module ShowOff
     class Base
-        attr_reader :token, :url, :params
+        attr_reader :token, :url
 
         def initialize(token, url)
             @token ||= token
