@@ -12,9 +12,6 @@ module ShowOff
             
             HTTP_METHODS.each do |http_method_name|
                 define_method("perform_#{http_method_name}") do | path, params={}, headers={}|
-                    
-                    # TODO: below mentioned headers declaration code needs to refactor
-                    # headers = herder.merge('Content-Type' => 'application/json') if params.nil?
                     body_parser(RestClient::Request.execute(
                         method:  http_method_name, 
                         url:     END_POINT+path,
