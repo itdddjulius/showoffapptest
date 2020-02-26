@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  resource :user, path: 'users/me/widgets', only: [:show]
+  namespace :authentication do
+    resources :sessions, only: [:create] 
+  end         
+	
+	get '/login' => 'authentication/sessions#new', as: :login
   
-  root to: 'dashboard#show'
+
+  get 'passwords/new'
+  get 'widgets/show'
+  get 'widgets/index'
+  get 'widgets/show'
+	# get '/user/me/widgets', to: 'user#show'
+	get '/user/reset_password', to: 'user#reset_password'
+  get '/dashboard', to: 'dashboard#show'
+  root to: 'visitor#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

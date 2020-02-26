@@ -3,9 +3,6 @@
 module ShowOff
 
     class Widgets < Base
-        # Created an alias method as both are performing the same last....
-        alias_method :search, :visible
-
         # Each call will handen there own params and headers...
         def initialize(token, url, params={})
             super(token, url)
@@ -17,7 +14,7 @@ module ShowOff
             @widget_service.perform_get(@url, @params)
         end
 
-        private
-
+        # Created an alias method as both are performing the same last....
+        alias_method :search, :visible
     end
 end
