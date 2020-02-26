@@ -3,8 +3,6 @@ class WidgetsController < ApplicationController
 
 
   def index
-  	p "ssssss"
-  	p current_user
   	@header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"]}).perform
 		@user = ShowOff::User.new(session[:token], SHOWOFF_USER_WIDGETS, {}, @header)
 	  render json: @user.widgets 

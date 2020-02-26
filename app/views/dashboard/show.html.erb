@@ -1,0 +1,27 @@
+<div class="container"  style="margin-top: 100px;">
+	<div class="row">
+		<div col-md-12>
+			<h1>List of visible widgets</h1>
+		</div>
+		
+	</div>
+
+<div class="row mt-5">
+	<div class="col-md-12 text-left">
+			<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">User</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<%= render partial: 'widget', collection: @widgets%>
+    
+  </tbody>
+</table>
+	</div>
+</div>
+</div>

@@ -3,8 +3,6 @@
 module ShowOff
 
     class Widgets < Base
-        
-
         # Each call will handen there own params and headers...
         def initialize(token, url, params={})
             super(token, url)

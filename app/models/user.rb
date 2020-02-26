@@ -17,8 +17,6 @@ class User
   	begin
 	  	@header = ShowoffHeader.new({ content_type: true }).perform
 	  	@user = ShowOff::Authentication.new(nil, SHOWOFF_LOGIN, widgets_params, @header).authenticate
-	  	p "++++++++++++++"
-	  	p @user
 	  	return @user
 	  rescue RestClient::UnprocessableEntity => e
 	  	return false
