@@ -1,21 +1,25 @@
 class WidgetsController < ApplicationController
+	before_action :authorize
+
 
   def index
-		session[:token] = '47f0ac2e9712a5f23801d15e334e6c498345b8b04820b08e15146d6e056ac5f0'
-		@header = ShowoffHeader.new(session[:token]).perform
+  	p "ssssss"
+  	p current_user
+  	@header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"]}).perform
 		@user = ShowOff::User.new(session[:token], SHOWOFF_USER_WIDGETS, {}, @header)
 	  render json: @user.widgets 
 	 # create
   end
 
   def create
-  	@header = ShowoffHeader.new(session[:token], { content_type: true }).perform
+  	@header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"], content_type: true }).perform
   	@user = ShowOff::User.new(session[:token], SHOWOFF_CREATE_WIDGETS, widgets_params, @header)
   	render json: @user.create_widgets
   end
 
   private
 
+  # TODO: Dynamic value needs to enter...
   def widgets_params
   	{
   		"widget": {

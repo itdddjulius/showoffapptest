@@ -1,7 +1,6 @@
 # Logged in User Widgets 
 
 module ShowOff
-
     class User < Base
 
         # Each call will handen there own params and headers...
