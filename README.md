@@ -26,14 +26,20 @@ created it.
 - [x] As a logged in user, I should be able to search visible widgets on landing page.
 - [ ] As a logged in user, I should see a message if no result found on landing page.
 - [x] As a logged in user, I should be able to view the reference of Users for each widgets.
-- [ ] As a logged in user, I should view my widget page.
-- [ ] As a logged in user, I should be able to create a widget.
+- [x] As a logged in user, I should view my widget page.
+- [x] As a logged in user, I should be able to create a widget.
 
 
 #### TODO
 
 - [ ] Need to implement cache for API calls.
 - [ ] 
+
+
+#### IMPORTANT NOTE:
+1. The Logo is used under non copyright license, and anyone can use it.
+2. For table I could have used datatables framework, but as this is a test assignment so I thought of using minimum third party packages / libraries.
+3. 
 
 
 ### Required Widgets application API
@@ -121,5 +127,3 @@ __Reset Password:__
 .
 
 
-#### NOTE:
-1. The Logo is used under non copyright license, and anyone can use it.
