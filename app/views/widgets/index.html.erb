@@ -2,12 +2,12 @@
    <div class="row">
       <div col-md-12>
          <h1>List of my widgets</h1>
-         <%= success_message(flash[:notice]) %>
+         <%= flash_message(flash[:notice]) %>
       </div>
    </div>
    <div class="row mt-5">
       <div class="col-md-12 text-right">
-         <%= link_to "Create Widget", "", data: { toggle: "modal", target: "#createWidget" }  %>
+         <%= link_to "Create Widget", "", data: { toggle: "modal", target: "#createWidget" } %>
       </div>
       <div class="col-md-12 text-left mt-2">
          <table class="table">
@@ -20,12 +20,12 @@
                </tr>
             </thead>
             <tbody>
-               <%= render partial: 'widget', collection: @widgets%>
+               <%= render partial: "widget", collection: @widgets %>
             </tbody>
          </table>
       </div>
    </div>
    <div class="modal fade" id="createWidget" tabindex="-1" role="dialog" aria-labelledby="createWidgetLabel" aria-hidden="true">
-      <%= render 'new' %>
+      <%= render "new" %>
    </div>
 </div>
