@@ -8,11 +8,11 @@ class DashboardController < ApplicationController
 
   # AJAX request
   def search
-  	widgets = ShowOff::Widgets.new(current_user["token"]["access_token"], SHOWOFF_SEARCH_AND_VISIBLE, { term: params[:search].strip }).search
-  	@widgets = widgets["data"]["widgets"]
+    widgets = ShowOff::Widgets.new(current_user["token"]["access_token"], SHOWOFF_SEARCH_AND_VISIBLE, { term: params[:search].strip }).search
+    @widgets = widgets["data"]["widgets"]
 
-  	respond_to do |format|
-  		format.js
-  	end
+    respond_to do |format|
+      format.js
+    end
   end
 end
