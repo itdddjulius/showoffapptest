@@ -1,0 +1,2 @@
+module StubVisibleWidgets
+end
