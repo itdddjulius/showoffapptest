@@ -1,0 +1,8 @@
+<%= form_with url: search_path, html: { id: 'search-widget', method: :get, class: 'navbar-form navbar-left'} do %>  
+  <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control", required: true %>  
+    <div class="input-group-btn">  
+      <%= button_tag "Search", :class => 'btn btn-info',:name => nil%>  
+    </div>  
+  </div>  
+<% end %>

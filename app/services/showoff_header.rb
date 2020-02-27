@@ -1,14 +1,13 @@
 class ShowoffHeader
-	attr_reader :options
+	attr_reader :token
 
-	def initialize(options={})
-		@options = options
+	def initialize(token)
+		@token = token
 	end
 
 	def perform
-		header = {}
-		header.merge!('Authorization': "Bearer #{@options[:authorization]}") if @options[:authorization]
-		header.merge!('Content-Type': 'application/json') if @options[:content_type]
+		header = {'Content-Type': 'application/json'}
+		header.merge!('Authorization': "Bearer #{@token}") if @token
 		header
 	end
 end
