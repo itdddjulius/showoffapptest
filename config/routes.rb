@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   post "/login" => "authentication/sessions#create"
   get "/logout" => "authentication/sessions#destroy"
 
-  get "passwords/new"
+  get "/password" => "passwords#new"
+  post "/password" => "passwords#create"
+
   resources :widgets, only: [:index, :create]
   # get '/user/me/widgets', to: 'user#show'
   get "/user/reset_password", to: "user#reset_password"

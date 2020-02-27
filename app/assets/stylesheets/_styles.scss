@@ -108,11 +108,16 @@ margin-top: 40px;
     pointer-events: none;
 }
 
+
+
 .wrap-login100-form-btn {
 	text-align: center;
 	button {
 		width: 50%;
 	}
+    .password {
+        width: 60%
+    }
 }
 
 
@@ -158,4 +163,5 @@ ul ul a {
     padding-left: 30px !important;
     background: #6d7fcc;
 }
+
 

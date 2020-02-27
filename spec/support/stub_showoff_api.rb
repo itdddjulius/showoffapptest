@@ -1,7 +1,7 @@
 module StubShowoffAPI
   def stub_authentication
     WebMock.disable_net_connect!(allow: "showoff-rails-react-production.herokuapp.com")
-    
+
     stub_request(:post, "https://showoff-rails-react-production.herokuapp.com/oauth/token").
       with(
       body: {

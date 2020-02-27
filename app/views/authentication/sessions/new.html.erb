@@ -1,7 +1,7 @@
 <div class="container-login100">
    <div class="wrap-login100">
 		   	<div>
-		   		<%= flash_message(flash[:error], "error") %>
+		   		<%= flash_message(flash[:error]) %>
 		   	</div>
       	<%= form_with model: @user, url: login_path, local: true, html: { method: :post, class: 'login100-form validate-form' } do |f| %>
          <span class="login100-form-title p-b-26">
@@ -28,6 +28,9 @@
                Login
                </button>
             </div>
+         </div>
+         <div class="text-center p-t-115">
+            <%= link_to 'Forgot Password', password_path, class: "txt2" %>
          </div>
          <div class="text-center p-t-115">
             <span class="txt1">

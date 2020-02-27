@@ -1,20 +1,20 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
-require 'spec_helper'
-require 'webmock/rspec'
+require "spec_helper"
+require "webmock/rspec"
 # require 'capybara/rails'
 require "rack_session_access/capybara"
 
-require 'simplecov'
+require "simplecov"
 SimpleCov.start
 
-require_relative './support/stub_showoff_api'
-ENV['RAILS_ENV'] ||= 'test'
+require_relative "./support/stub_showoff_api"
+ENV["RAILS_ENV"] ||= "test"
 
-require File.expand_path('../config/environment', __dir__)
+require File.expand_path("../config/environment", __dir__)
 
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
-require 'rspec/rails'
+require "rspec/rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

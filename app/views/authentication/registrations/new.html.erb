@@ -2,7 +2,7 @@
 		
    <div class="wrap-login100">
    		<div>
-   			<%= flash_message(flash[:error], "error") %>
+   			<%= flash_message(flash[:error]) %>
    		</div>
       	<%= form_with model: @user, url: signup_path, local: true, html: { method: :post, class: 'login100-form validate-form' } do |f| %>
          <span class="login100-form-title p-b-26">
