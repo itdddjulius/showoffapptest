@@ -16,5 +16,10 @@ class Authentication::SessionsController < ApplicationController
       render "new"
   	end
   end
+
+  def destroy
+    session[:user] = nil
+    redirect_to '/login'
+  end 
   
 end
