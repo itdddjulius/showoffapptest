@@ -3,16 +3,18 @@ class WidgetsController < ApplicationController
 
 
   def index
-  	@header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"]}).perform
-		@user = ShowOff::User.new(session[:token], SHOWOFF_USER_WIDGETS, {}, @header)
-	  render json: @user.widgets 
-	 # create
+  	header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"]}).perform
+		widgets = ShowOff::User.new(session[:token], SHOWOFF_USER_WIDGETS, {}, header).widgets
+		@widgets = widgets["data"]["widgets"]
   end
 
   def create
-  	@header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"], content_type: true }).perform
-  	@user = ShowOff::User.new(session[:token], SHOWOFF_CREATE_WIDGETS, widgets_params, @header)
-  	render json: @user.create_widgets
+  	header = ShowoffHeader.new({ authorization: current_user["token"]["access_token"], content_type: true }).perform
+  	widget = ShowOff::User.new(session[:token], SHOWOFF_CREATE_WIDGETS, widgets_params, header).create_widgets
+  	if widget["message"].eql?('Success')
+  		flash[:notice] = "Widget created successfully"
+  		redirect_back fallback_location: dashboard_path
+  	end
   end
 
   private
@@ -21,9 +23,9 @@ class WidgetsController < ApplicationController
   def widgets_params
   	{
   		"widget": {
-  			"name": "A Hidden Widget - This is working",
-  			"description": "Widget Is Working",
-  			"kind": "visible"
+  			"name": params[:name],
+  			"description": params[:description],
+  			"kind": params[:kind]
   		}
   	}
   end
