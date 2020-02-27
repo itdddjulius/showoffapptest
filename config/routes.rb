@@ -1,5 +1,8 @@
 Rails.application.routes.draw do        
-	
+
+  get '/signup' => 'authentication/registrations#new'
+  post '/signup' => 'authentication/registrations#create'
+
 	get '/login' => 'authentication/sessions#new'
 	post '/login' => 'authentication/sessions#create'
 	get '/logout' => 'authentication/sessions#destroy'

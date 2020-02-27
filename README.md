@@ -10,13 +10,13 @@
 
 #### User Stories
 - [x] As a guest user, I should be able to view the index page.
-- [ ] As a guest user, I should be able to register with valid credetial.
-- [ ] As a guest user, I should should not be able to register with invalid credetial.
+- [x] As a guest user, I should be able to register with valid credetial.
+- [x] As a guest user, I should should not be able to register with invalid credetial.
 - [x] As a guest user, I should be able to login with valid credential.
-- [ ] As a guest user, I should not be able to login with invalid credential.
+- [x] As a guest user, I should not be able to login with invalid credential.
+- [ ] As a registered user, I should be able to reset my password
 - [x] As a logged in user, I should view the list visible widgets on landing page.
 - [x] As a logged in user, I should be able to search visible widgets on landing page.
-- [ ] As a logged in user, I should see a message if no result found on landing page.
 - [x] As a logged in user, I should be able to view the reference of Users for each widgets.
 - [x] As a logged in user, I should view my widget page.
 - [x] As a logged in user, I should be able to create a widget.
