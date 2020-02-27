@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 	# get '/user/me/widgets', to: 'user#show'
 	get '/user/reset_password', to: 'user#reset_password'
   get '/dashboard', to: 'dashboard#show'
+  get '/search' => 'dashboard#search', :as => :search
+
   root to: 'visitor#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

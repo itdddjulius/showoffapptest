@@ -8,7 +8,6 @@
    <div class="row mt-5">
       <div class="col-md-12 text-right">
          <%= link_to "Create Widget", "", data: { toggle: "modal", target: "#createWidget" }  %>
-
       </div>
       <div class="col-md-12 text-left mt-2">
          <table class="table">
@@ -26,8 +25,7 @@
          </table>
       </div>
    </div>
-   <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
    <div class="modal fade" id="createWidget" tabindex="-1" role="dialog" aria-labelledby="createWidgetLabel" aria-hidden="true">
-   		<%= render 'new' %>
+      <%= render 'new' %>
    </div>
 </div>
