@@ -1,15 +1,13 @@
-Rails.application.routes.draw do
-  namespace :authentication do
-    resources :sessions, only: [:create] 
-  end         
+Rails.application.routes.draw do        
 	
-	get '/login' => 'authentication/sessions#new', as: :login
+	get '/login' => 'authentication/sessions#new'
+	post '/login' => 'authentication/sessions#create'
+	get '/logout' => 'authentication/sessions#destroy'
+
   
 
   get 'passwords/new'
-  get 'widgets/show'
-  get 'widgets/index'
-  get 'widgets/show'
+  resources :widgets, only: [:index, :create]
 	# get '/user/me/widgets', to: 'user#show'
 	get '/user/reset_password', to: 'user#reset_password'
   get '/dashboard', to: 'dashboard#show'

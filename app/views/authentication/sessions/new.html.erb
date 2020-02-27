@@ -1,6 +1,6 @@
 <div class="container-login100">
    <div class="wrap-login100">
-      	<%= form_with model: @user, url: authentication_sessions_path, html: { method: :post, class: 'login100-form validate-form' } do |f| %>
+      	<%= form_with model: @user, url: login_path, html: { method: :post, class: 'login100-form validate-form' } do |f| %>
          <span class="login100-form-title p-b-26">
          Please sign in 
          </span>
