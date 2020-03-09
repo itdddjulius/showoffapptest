@@ -15,3 +15,4 @@ RSpec.describe WidgetsController, type: :controller do
     end
   end
 end
+

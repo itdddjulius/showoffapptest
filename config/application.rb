@@ -31,3 +31,4 @@ module ShowoffWidgets
     config.generators.system_tests = nil
   end
 end
+

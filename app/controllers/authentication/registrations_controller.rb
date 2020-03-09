@@ -16,3 +16,4 @@ class Authentication::RegistrationsController < ApplicationController
     end
   end
 end
+

@@ -5,3 +5,4 @@ SHOWOFF_PASSWORD_RESET = "/api/v1/users/reset_password"
 SHOWOFF_LOGIN = "/oauth/token"
 SHOWOFF_SIGNUP = "/api/v1/users"
 SHOWOFF_RESET_PASSWORD = "/api/v1/users/reset_password"
+

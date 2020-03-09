@@ -60,3 +60,5 @@ gem "jquery-rails", "~> 4.3"
 gem "activerecord", "~> 5.2"
 gem 'simplecov', require: false, group: :test
 gem 'rails_12factor', group: :production
+
+

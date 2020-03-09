@@ -21,3 +21,4 @@ RSpec.feature "Guest user should be able to login", js: true do
   #   expect(page).to have_text("A Visible Widget")
   # end
 end
+

@@ -8,3 +8,4 @@ RSpec.describe PasswordsController, type: :controller do
     end
   end
 end
+

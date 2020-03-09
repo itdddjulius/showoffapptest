@@ -16,3 +16,4 @@ RSpec.feature "Guest user should be able to login", :type => :feature do
     expect(page).to have_text("List of visible widgets")
   end
 end
+

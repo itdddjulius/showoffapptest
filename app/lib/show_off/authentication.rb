@@ -22,3 +22,4 @@ module ShowOff
     alias_method :register, :authenticate
   end
 end
+

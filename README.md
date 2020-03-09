@@ -1,49 +1,61 @@
-# Showoff Widgets API application
 
+# ShowOff Technical Test : Ruby on Rails
 
-#### Technology Stack
-1. Ruby version: 2.7.0
-2. Ruby on Rails Version: 5.2.4.1
-3. HTML5
-4. CSS3
- 
+This is an application built for the thechnical test set by http://showoff.ie/
 
-#### User Stories
-- [x] As a guest user, I should be able to view the index page.
-- [x] As a guest user, I should be able to register with valid credetial.
-- [x] As a guest user, I should should not be able to register with invalid credetial.
-- [x] As a guest user, I should be able to login with valid credential.
-- [x] As a guest user, I should not be able to login with invalid credential.
-- [ ] As a registered user, I should be able to reset my password
-- [x] As a logged in user, I should view the list visible widgets on landing page.
-- [x] As a logged in user, I should be able to search visible widgets on landing page.
-- [x] As a logged in user, I should be able to view the reference of Users for each widgets.
-- [x] As a logged in user, I should view my widget page.
-- [x] As a logged in user, I should be able to create a widget.
+## Getting started
+### Set Environment Variables
 
+This application make use of these Environment variables for working.
 
-#### TODO
+ 1. `SHOWOFF_URL`
+ 2. `SHOWOFF_CLIENT_ID`
+ 3. `SHOWOFF_CLIENT_SECRET`
 
-- [ ] Need to implement cache for API calls.
-- [ ] 
+ For development you can use the `.env.example` file for reference.
+ copy the `.env.example` file to `.env` add your variables in there.
 
+You can either use docker to develop this or you can manually install ruby and run the app in the traditional way.
 
-#### IMPORTANT NOTE:
-1. The Logo is used under non copyright license, and anyone can use it.
-2. For table I could have used datatables framework, but as this is a test assignment so I thought of using minimum third party packages / libraries.
-3. 
+### Run using docker
 
+first you have to install docker.
+instructions on installing docker : https://docs.docker.com/machine/install-machine/
 
+once its installed make sure you have added the `.env` file as instructed above. docker-compose make use of it to set the environment variables
 
+```
+# build all the necessary containers.
+$ docker-compose build
 
+# start the application
+$ docker-compose up
+```
 
-* How to run the test suite
+### Run Manually
+This application is made using Ruby on Rails. So first you need to install ruby version **2.6.3** to get started.
 
-* Services (job queues, cache servers, search engines, etc.)
+next install all the required gems via bundler
+```
+$ bundle install
+```
+If the test suite passes, you'll be ready to run the app in a local server:
 
-* Deployment instructions
+```
+$ rails server
+```
+## TESTS
+This project uses `rspec` as the testing library
 
-* ...
-.
+to run the test if you are using docker use this command
+
+```
+$ docker-compose run -e "RAILS_ENV=test" web rake spec
+```
+
+## Author
+Julius Olatokunbo
+itddd.julius@gmail.com
+www.raiiar.com
 
 

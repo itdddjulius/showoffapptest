@@ -7,3 +7,4 @@ RSpec.feature "Guest user visiting website", :type => :feature do
     expect(page).to have_text("Welcome to world of Widgets for Social Application")
   end
 end
+

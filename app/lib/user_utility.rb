@@ -4,3 +4,4 @@ module UserUtility
     return user["user"]["data"]
   end
 end
+

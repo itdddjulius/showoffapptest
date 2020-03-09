@@ -20,3 +20,4 @@ module ShowOff
     alias_method :search, :visible
   end
 end
+

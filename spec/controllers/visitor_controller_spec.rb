@@ -8,3 +8,4 @@ RSpec.describe VisitorController, type: :controller do
     end
   end
 end
+

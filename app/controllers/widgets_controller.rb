@@ -27,3 +27,4 @@ class WidgetsController < ApplicationController
     }
   end
 end
+

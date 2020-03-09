@@ -8,3 +8,4 @@ RSpec.describe Authentication::RegistrationsController, type: :controller do
     end
   end
 end
+

@@ -16,3 +16,4 @@ module StubLogin
 	  	           }'
   end
 end
+
