@@ -8,3 +8,4 @@ Rails.application.routes.draw do
   get '/delete_widget/:id' => 'widgets#destroy', as: :delete_widget
   get '/my_widgets' => 'widgets#my_widget', as: :my_widget
 end
+

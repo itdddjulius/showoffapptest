@@ -84,3 +84,4 @@ production:
   database: showoff_tech_challenge_production
   username: nabeelnazir
   password: <%= ENV['SHOWOFF_TECH_CHALLENGE_DATABASE_PASSWORD'] %>
+
