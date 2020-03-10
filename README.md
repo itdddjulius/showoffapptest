@@ -54,7 +54,7 @@ Run `rspec` to run the full test suite. Following test cases are covered:
  - [Capybara](https://github.com/teamcapybara/capybara)
  - [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
  - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
- - [Simplecov](https://github.com/colszowka/simplecov)
+
  
  ### Working demo
 
