@@ -1,11 +1,8 @@
-[![ruby](https://img.shields.io/badge/ruby-v2.5.7-red.svg)](https://www.ruby-lang.org/en/)
-[![rails](https://img.shields.io/badge/rails-v5.0-orange.svg)](https://rubyonrails.org/)
-
-# READ ME
+## READ ME
 
 ## Description/Purpose
 
-This is a small rails application that allows users to view a collection of widgets.  An unregistered or logged out user can see a page listing all of the widgets in the collection, inlcuding a link to the user who created it and he/she can search the public/visible widgets.  If an unregistered/logged out user clicks on the widget creator's name, they will be taken to a page that show's that user's detail, along with a listing of all the widgets that user created.
+ShowOff required, as part of their Technical Test, a small rails application that allows users to view a collection of widgets.  An unregistered or logged out user can see a page listing all of the widgets in the collection, inlcuding a link to the user who created it and he/she can search the public/visible widgets.  If an unregistered/logged out user clicks on the widget creator's name, they will be taken to a page that show's that user's detail, along with a listing of all the widgets that user created.
 
 An unregistered user may also register with the web app in order to login to an account.
 
@@ -33,10 +30,10 @@ Run `rspec` to run the full test suite. Following test cases are covered:
 4. Functional tests.
 
 ## Important files to view
-1. [ShowoffApiConnectorService](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/services/showoff_api_connector_service.rb) class will connect the showoff API by Net::HTTP and RestClient post put get and delete calls.
-2. [ShowoffApiService](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/services/showoff_api_service.rb) class will consume showoff API calls by using ShowoffApiConnectorService class.
-3. [WidgetsController](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/controllers/widgets_controller.rb) has all methods for example create, delete, update, edit and search widgets.
-4. [Rspec](https://github.com/nabeelnazir/Showoff-Application/tree/master/spec) test cases are present in the app.
+1. [ShowoffApiConnectorService](https://github.com/itdddjulius/Show2/blob/master/app/services/showoff_api_connector_service.rb) class will connect the showoff API by Net::HTTP and RestClient post put get and delete calls.
+2. [ShowoffApiService](https://github.com/itdddjulius/Show2/blob/master/app/services/showoff_api_service.rb) class will consume showoff API calls by using ShowoffApiConnectorService class.
+3. [WidgetsController](https://github.com/itdddjulius/Show2/blob/master/app/controllers/widgets_controller.rb) has all methods for example create, delete, update, edit and search widgets.
+4. [Rspec](https://github.com/itdddjulius/Show2/tree/master/spec) test cases are present in the app.
 
 ## Dependencies
  ### All Environments
@@ -60,8 +57,9 @@ Run `rspec` to run the full test suite. Following test cases are covered:
  - [Simplecov](https://github.com/colszowka/simplecov)
  
  ### Working demo
- https://drive.google.com/file/d/1GGrLozHEe5-CFJ7EOIUbo4XLFt0spHyS/view?usp=sharing
- 
- ## Contributors/Developers
-[Iam!](https://github.com/nabeelnazir)
 
+ 
+ ## Author
+Julius Olatokunbo
+info@raiiar.com
+www.raiiar.com
