@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ShowoffWidgets</title>
+    <title>Showoff Widgets Application</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", media: "all", 'data-turbolinks-track': "reload" %>
-    <%= javascript_include_tag "application", 'data-turbolinks-track': "reload" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <div class="d-flex flex-column">
-      <%= render "layouts/navigations/header" %>
+    <%= render 'navigation/header' %>
+    <div class="container-fluid">
+      <%= flash_messages %>
       <%= yield %>
     </div>
   </body>
 </html>
-

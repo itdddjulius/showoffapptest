@@ -1,61 +1,66 @@
+[![ruby](https://img.shields.io/badge/ruby-v2.5.7-red.svg)](https://www.ruby-lang.org/en/)
+[![rails](https://img.shields.io/badge/rails-v5.0-orange.svg)](https://rubyonrails.org/)
 
-# ShowOff Technical Test : Ruby on Rails
+# READ ME
 
-This is an application built for the thechnical test set by http://showoff.ie/
+## Description/Purpose
 
-## Getting started
-### Set Environment Variables
+This is a small rails application that allows users to view a collection of widgets.  An unregistered or logged out user can see a page listing all of the widgets in the collection, inlcuding a link to the user who created it and he/she can search the public/visible widgets.  If an unregistered/logged out user clicks on the widget creator's name, they will be taken to a page that show's that user's detail, along with a listing of all the widgets that user created.
 
-This application make use of these Environment variables for working.
+An unregistered user may also register with the web app in order to login to an account.
 
- 1. `SHOWOFF_URL`
- 2. `SHOWOFF_CLIENT_ID`
- 3. `SHOWOFF_CLIENT_SECRET`
+A logged in user can view their own dashboard.  A user's dashboard will have a listing of their widgets.  A logged in user can create new widgets, delete existing widgets, see more details about a specific widget, edit a widget and search his own widgets.
 
- For development you can use the `.env.example` file for reference.
- copy the `.env.example` file to `.env` add your variables in there.
+## System Requirements
+- Ruby >= 2.5.7
+- Rails >= 5.0
 
-You can either use docker to develop this or you can manually install ruby and run the app in the traditional way.
+## Initial Setup
+1. Clone or fork this project to your local machine.
+2. Run `bundle` in the project folder.
+3. Add the following API keys to [Rails 5 Credentials](https://medium.com/cedarcode/rails-5-2-credentials-9b3324851336) with the variable names exactly as shown:
+    - `client_id`
+    - `client_secret`
+4. Run `rails db:{create,migrate,seed}` in the project folder.
+5. To use the application locally, run `rails s` and navigate to `http:localhost:3000`
+6. **Or, use go [here](https://mysterious-brook-62552.herokuapp.com/) to see the application live**
 
-### Run using docker
+## Running Tests
+Run `rspec` to run the full test suite. Following test cases are covered:
+1. Feature/Acceptance tests.
+2. Model tests.
+3. Controller tests.
+4. Functional tests.
 
-first you have to install docker.
-instructions on installing docker : https://docs.docker.com/machine/install-machine/
+## Important files to view
+1. [ShowoffApiConnectorService](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/services/showoff_api_connector_service.rb) class will connect the showoff API by Net::HTTP and RestClient post put get and delete calls.
+2. [ShowoffApiService](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/services/showoff_api_service.rb) class will consume showoff API calls by using ShowoffApiConnectorService class.
+3. [WidgetsController](https://github.com/nabeelnazir/Showoff-Application/blob/master/app/controllers/widgets_controller.rb) has all methods for example create, delete, update, edit and search widgets.
+4. [Rspec](https://github.com/nabeelnazir/Showoff-Application/tree/master/spec) test cases are present in the app.
 
-once its installed make sure you have added the `.env` file as instructed above. docker-compose make use of it to set the environment variables
+## Dependencies
+ ### All Environments
+ - [Ruby](https://www.ruby-lang.org/en/)
+ - [Rails](https://guides.rubyonrails.org/)
+ - [Postgresql](https://www.postgresql.org/)
+ - [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+ - [Bcrypt](https://github.com/codahale/bcrypt-ruby)
 
-```
-# build all the necessary containers.
-$ docker-compose build
+ ### Development
+ - [Rspec for Rails](https://github.com/rspec/rspec-rails)
+ - [Pry for Rails](https://github.com/rweng/pry-rails)
 
-# start the application
-$ docker-compose up
-```
-
-### Run Manually
-This application is made using Ruby on Rails. So first you need to install ruby version **2.6.3** to get started.
-
-next install all the required gems via bundler
-```
-$ bundle install
-```
-If the test suite passes, you'll be ready to run the app in a local server:
-
-```
-$ rails server
-```
-## TESTS
-This project uses `rspec` as the testing library
-
-to run the test if you are using docker use this command
-
-```
-$ docker-compose run -e "RAILS_ENV=test" web rake spec
-```
-
-## Author
-Julius Olatokunbo
-itddd.julius@gmail.com
-www.raiiar.com
-
-
+ 
+ ### Test
+ - [VCR](https://github.com/vcr/vcr)
+ - [Webmock](https://github.com/bblimke/webmock)
+ - [Capybara](https://github.com/teamcapybara/capybara)
+ - [Shoulda-Matchers](https://github.com/thoughtbot/shoulda-matchers)
+ - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner)
+ - [Simplecov](https://github.com/colszowka/simplecov)
+ 
+ ### Working demo
+ https://drive.google.com/file/d/1GGrLozHEe5-CFJ7EOIUbo4XLFt0spHyS/view?usp=sharing
+ 
+ ## Contributors/Developers
+[Iam!](https://github.com/nabeelnazir)

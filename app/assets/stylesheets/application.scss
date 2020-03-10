@@ -1,2 +1,10 @@
 @import "bootstrap";
-@import 'styles'
+.bordered {
+  border: 1px solid #dee2e6;
+}
+.padding-10 {
+  padding: 10px;
+}
+.float-left {
+  float: left;
+}

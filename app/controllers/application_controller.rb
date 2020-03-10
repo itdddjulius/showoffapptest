@@ -1,23 +1,11 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
-  add_flash_types :notice, :error
-
-  helper_method :current_user
-
-  def current_user
-    @current_user ||= session[:user] if session[:user]
+  # showoff API client ID
+  def client_id
+    Rails.application.credentials.config[:client_id].to_s
   end
 
-  def authorize
-    redirect_to "/login" unless current_user
-  end
-
-  private
-
-  def root_redirection
-    if current_user
-      redirect_to dashboard_path
-    end
+  # showoff API client secret
+  def client_secret
+    Rails.application.credentials.config[:client_secret].to_s
   end
 end
-

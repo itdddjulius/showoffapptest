@@ -1,31 +1,6 @@
-<div class="container"  style="margin-top: 100px;">
-   <div class="row">
-      <div col-md-12>
-         <h1>List of my widgets</h1>
-         <%= flash_message(flash[:notice]) %>
-      </div>
-   </div>
-   <div class="row mt-5">
-      <div class="col-md-12 text-right">
-         <%= link_to "Create Widget", "", data: { toggle: "modal", target: "#createWidget" } %>
-      </div>
-      <div class="col-md-12 text-left mt-2">
-         <table class="table">
-            <thead class="thead-light">
-               <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">User</th>
-               </tr>
-            </thead>
-            <tbody>
-               <%= render partial: "widget", collection: @widgets %>
-            </tbody>
-         </table>
-      </div>
-   </div>
-   <div class="modal fade" id="createWidget" tabindex="-1" role="dialog" aria-labelledby="createWidgetLabel" aria-hidden="true">
-      <%= render "new" %>
-   </div>
-</div>
+<h1 style="text-align: center;"><u>Widgets</u></h1>
+<% if @widgets.present? %>
+  <%= render 'navigation/widgets_list', locale => {widgets: @widgets} %>
+<% else %>
+ <strong>No data returned!</strong>
+<% end %>
